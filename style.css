@@ -1,0 +1,309 @@
+/* Reset de Estilos - Estamos removendo todos os estilos padrões do navegador */
+
+/* Seletor Global - Ou seja, todos os elementos da nossa estrutura receberam essas configurações */
+* {
+  margin: 0;
+  padding: 0;
+  /* Tamanho da caixa */
+  /* Tamanho total do elemento = Contéudo + Padding + Border */
+  box-sizing: border-box;
+
+  /* None - Nenhum */
+  text-decoration: none;
+
+  /* Remove os pontinho dos elementos da lista */
+  list-style: none;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: rgb(27, 27, 27);
+  color: #fafafa;
+}
+
+/* Impede que a imagem ultrapasse a largura do seu contêiner */
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a,
+li,
+button {
+  /* Transition: background-color 400ms ease 1s; */
+
+  /* Transition: background-color 400ms ease, color 500ms ease-in; */
+
+  transition: all 300ms ease;
+}
+
+header {
+  background-color: #212121;
+
+  /* Padrão para todos os elementos do HTML */
+  /* position: static; */
+  /* position: relative; */
+  /* top: 20px; */
+  /* left: 10px; */
+
+  /* z-index: -1; */
+  /* position: absolute; */
+  /* position: fixed; */
+  position: sticky;
+
+  top: 0;
+
+  /* Comportamento padrão do display: flex; = row (linha) */
+  display: flex;
+
+  /* Comportamento padrão */
+  flex-direction: row;
+
+  /* Cria um espaço entre os elementos */
+  justify-content: center;
+
+  /* Comportamento padrão de alinhamento de itens */
+  /* Lida com o alinhamento do conteúdo no eixo vertical */
+  /* align-items: stretch; */
+  align-items: center;
+
+  height: 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.ajuste-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: bisque;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+li {
+  padding: 5px 10px;
+  border: 2px solid transparent;
+}
+
+li:hover {
+  background-color: #4e4e4e;
+  border-radius: 5px 15px;
+}
+
+li:hover a {
+  color: #da3ebd;
+}
+
+.index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.main section {
+  flex: 1 320px;
+  background-color: #333131;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ffffff22;
+}
+
+section h2 {
+  margin-bottom: 16px;
+
+  /* root em - Tamanho da fonte do elemento raiz (HTML) */
+  /* 1rem = 16px */
+  font-size: 2rem;
+}
+
+section p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 150%;
+
+  /* line-height = 18px * 1.5 */
+  /* 27px */
+}
+
+section a {
+  /* background-color = muda a cor de fundo do elemento */
+  background-color: #da3ebd;
+
+  /* Muda a cor do texto */
+  color: #fafafa;
+
+  /* font-size = tamanho da fonte */
+  font-size: 18px;
+
+  /* Espessura da fonte */
+  font-weight: 600;
+
+  /* Alinhamento de texto ao centro */
+  text-align: center;
+
+  /* widht(largura) = aplicamos 100% para garantir que o elemento ocupe toda a largura disponivel*/
+  width: 100%;
+
+  /* Converter a apresentação padrão do elemento(que é inline) para inline-block 
+  Ele ainda vai se comportar como um elemento inline, porém vai ser capaz de receber propriedades de elementos de bloco, como largura(widht), altura(height), preenchimento(padding)
+  */
+  display: inline-block;
+
+  /* Cria um espaçamento(margin) na parte superior(top) */
+  margin-top: 10px;
+
+  /* Aplica um preenchimento na parte superior e inferior e mantem as laterais sem preenchimento*/
+  padding: 10px 0;
+
+  /* Configuração para arredondamento de bordas */
+  border-radius: 6px;
+}
+
+/* Aplicando pseudo-classe do tipo hover, isso faz com que o elemento sofra uma alteração quando o cursor do mouse passar por cima do elemento a */
+section a:hover {
+  background-color: #942a81;
+}
+
+footer {
+  background-color: #212121;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 10px;
+}
+
+footer p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+footer img {
+  width: 30px;
+}
+
+footer a {
+  display: inline-block;
+}
+
+/* Seletor de irmação adjacente, no caso, ele seleciona o elemento que vem depois do primeiro elemento mencionada. Nesse caso, estou aplica a margem ao elemento que vem depois do P */
+/* footer p + a {
+  margin-right: 15px;
+  } */
+
+footer a:first-of-type {
+  margin-right: 15px;
+}
+
+/* Fim da estilização da index.html */
+
+/* Inicio da estilização da sobre.html */
+.sobre section img {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+article {
+  margin-top: 15px;
+}
+
+article h3 {
+  margin-bottom: 5px;
+}
+/* Fim da estilização da sobre.html */
+
+/* Inicio da estilização da contato.html */
+.contato {
+  /* d(dinamyc - Dinâmica(o)) v(viewport - visualização) h(height - altura) */
+  height: 100dvh;
+}
+
+form,
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  background-color: #212121;
+  border-radius: 6px;
+  padding: 12px;
+
+  gap: 1rem;
+}
+
+form div {
+  gap: 0.125rem;
+}
+
+form label {
+  font-size: 1.125rem;
+}
+
+form input {
+  height: 2rem;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #0000003d;
+}
+
+form button {
+  height: 2rem;
+  border-radius: 4px;
+  border: none;
+  background: linear-gradient(
+    160deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  color: #fafafa;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: linear-gradient(
+    160deg,
+    rgb(53, 79, 211) 0%,
+    rgb(196, 52, 81) 100%
+  );
+}
+
+/* 
+@media (condição){
+  seletor{
+    propriedade: valor;
+  }
+} 
+*/
+
+/* Aplica as config de media, desde que tenha uma tela E a largura minina seja de 500px */
+
+@media (min-width: 957px) {
+  body {
+    background-color: #942a81;
+  }
+
+  .sobre {
+    height: 80dvh;
+  }
+
+  .sobre-conteudo {
+    display: flex;
+    gap: 1rem;
+  }
+}

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Inicial</title>
+  <title>Contato</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,33 +29,23 @@
   </header>
 
   <main>
-    <div class="container main index">
+    <div class="container main contato">
       <section>
-        <h2>Sobre Mim</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <strong> Ullam </strong> odit ad a nisi eius harum
-          enim facere, vel aut
-          architecto asperiores nulla quo. Quaerat porro animi, quas ea corporis modi!</p>
+        <h2>Entre em contato</h2>
 
-        <a href="sobre.html">Saiba mais</a>
-      </section>
+        <form>
+          <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome completo">
+          </div>
 
-      <section>
-        <h2>O que come? Onde vive?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus at debitis natus ut illum, doloribus
-          veniam
-          corporis vero porro consectetur labore, soluta, ex voluptatem cum impedit odit possimus praesentium
-          exercitationem.</p>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="exemplo@exemplo.com" required>
+          </div>
 
-        <a href="sobre.html">Saiba mais</a>
-      </section>
-
-      <section>
-        <h2>O que come? Onde vive?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus at debitis natus ut illum, doloribus
-          veniam
-          corporis vero porro consectetur labore, soluta, ex voluptatem cum impedit odit possimus praesentium
-          exercitationem.</p>
-        <a href="sobre.html">Saiba mais</a>
+          <button type="submit">Enviar dados</button>
+        </form>
       </section>
     </div>
   </main>
